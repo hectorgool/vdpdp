@@ -1,0 +1,6 @@
+django==1.8
+djangorestframework
+markdown
+django-filter
+mysqlclient
+psycopg2
