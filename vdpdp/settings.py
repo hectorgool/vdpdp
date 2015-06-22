@@ -56,7 +56,8 @@ ROOT_URLCONF = 'vdpdp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        #'DIRS': [],
+        'DIRS': ['../vdpdp/templates', '../vdpdp/static'],#santo
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -113,7 +114,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#santo
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),'../static/',
+]
 
+#santo
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
